@@ -1,0 +1,14 @@
+{
+  "_nota": "Valori di partenza delle impostazioni del sito (brief, sezioni 2 e 15). Si cambiano dal pannello, in Impostazioni. I numeri di telefono NON stanno qui: sono dati personali e si inseriscono solo dal pannello, dopo la conferma dei titolari dei numeri.",
+  "instagram_url": "https://www.instagram.com/smg.summer.cup/",
+  "instagram_handle": "@smg.summer.cup",
+  "whatsapp_url": null,
+  "phones": [],
+  "contact_email": null,
+  "removal_email": null,
+  "maps_url": "https://www.google.com/maps/search/?api=1&query=Chiesa+Santa+Maria+Goretti+Cesenatico",
+  "controller_name": null,
+  "legal_reviewed": false,
+  "consent_form_url": null,
+  "show_visit_numbers": true
+}

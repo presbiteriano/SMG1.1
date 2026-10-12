@@ -1,0 +1,49 @@
+/*
+ * Token di design (brief 4.1 e 12.4).
+ * I componenti non scrivono mai un colore a mano: usano i token semantici qui sotto.
+ * Regola fissa: sul celeste si scrive in nero, mai in bianco (contrasto 1,8:1).
+ */
+:root {
+  /* Colori di marca */
+  --smg-sky: #7cc8fa;
+  --smg-ink: #0b0b0b;
+  --smg-white: #ffffff;
+  /* Derivati dal celeste, solo per leggibilità e sfondi */
+  --smg-sky-deep: #1f6f9e;
+  --smg-sky-soft: #eaf6fe;
+
+  /* Token semantici: tema chiaro (valore di partenza, brief 4.2) */
+  --bg: var(--smg-white);
+  --surface: var(--smg-white);
+  --surface-2: var(--smg-sky-soft);
+  --text: var(--smg-ink);
+  --text-muted: color-mix(in srgb, var(--smg-ink) 66%, var(--smg-white));
+  --accent: var(--smg-sky);
+  --on-accent: var(--smg-ink); /* sul celeste si scrive in nero, mai in bianco */
+  --link: var(--smg-sky-deep);
+  --line: color-mix(in srgb, var(--smg-ink) 14%, var(--smg-white));
+  --inverse: var(--smg-ink);
+  --on-inverse: var(--smg-white);
+  --focus: var(--smg-ink);
+
+  --smg-radius-card: 0.875rem;
+  --smg-shadow-card: 0 1px 0 color-mix(in srgb, var(--smg-ink) 6%, transparent), 0 10px 24px -18px color-mix(in srgb, var(--smg-ink) 45%, transparent);
+  --smg-shadow-pop: 0 18px 40px -20px color-mix(in srgb, var(--smg-ink) 55%, transparent);
+}
+
+/*
+ * Tema scuro: pronto ma non attivo. Il tema è ancora «da decidere» (brief 4.2), quindi non si segue
+ * prefers-color-scheme. Per attivarlo dopo l'approvazione basta mettere data-theme="dark" su <html>.
+ */
+:root[data-theme='dark'] {
+  --bg: var(--smg-ink);
+  --surface: color-mix(in srgb, var(--smg-white) 7%, var(--smg-ink));
+  --surface-2: color-mix(in srgb, var(--smg-sky) 14%, var(--smg-ink));
+  --text: var(--smg-white);
+  --text-muted: color-mix(in srgb, var(--smg-white) 70%, var(--smg-ink));
+  --link: var(--smg-sky);
+  --line: color-mix(in srgb, var(--smg-white) 18%, var(--smg-ink));
+  --inverse: var(--smg-sky);
+  --on-inverse: var(--smg-ink);
+  --focus: var(--smg-sky);
+}

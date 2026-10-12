@@ -1,0 +1,6 @@
+{
+  "_nota": "Poche scritte usate da componenti che girano solo nel browser e non possono ricevere testi dal server (pagina di errore). Tenute a parte per non far scaricare a ogni visitatore l'intero file dei messaggi.",
+  "errorTitle": "Palla in tribuna.",
+  "errorText": "Qualcosa non ha funzionato. Riprova tra un attimo: i risultati sono al sicuro.",
+  "errorCta": "Riprova"
+}

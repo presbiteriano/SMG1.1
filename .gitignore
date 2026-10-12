@@ -1,0 +1,23 @@
+# dipendenze e build
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# dati locali: database incorporato, foto caricate, posta di sviluppo
+.data/
+
+# segreti: mai nel repository (brief 12.3)
+.env
+.env.*
+!.env.example
+
+# test
+test-results/
+playwright-report/
+coverage/
+
+# sistema
+.DS_Store
+Thumbs.db
