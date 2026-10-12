@@ -1,0 +1,203 @@
+@import 'tailwindcss';
+@import '../lib/tokens/tokens.css';
+
+/* Tailwind usa solo i token del progetto: la tavolozza predefinita è spenta (brief 16.3). */
+@theme inline {
+  --color-*: initial;
+  --color-sky: var(--smg-sky);
+  --color-ink: var(--smg-ink);
+  --color-white: var(--smg-white);
+  --color-sky-deep: var(--smg-sky-deep);
+  --color-sky-soft: var(--smg-sky-soft);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-text: var(--text);
+  --color-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-link: var(--link);
+  --color-line: var(--line);
+  --color-inverse: var(--inverse);
+  --color-on-inverse: var(--on-inverse);
+
+  --font-display: var(--font-barlow), 'Arial Narrow', Arial, sans-serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --radius-card: var(--smg-radius-card);
+  --shadow-card: var(--smg-shadow-card);
+  --shadow-pop: var(--smg-shadow-pop);
+
+  --animate-rise: rise 220ms ease-out both;
+  --animate-pulse-ring: pulse-ring 1.6s ease-out infinite;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 80%, transparent);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 7px transparent;
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 0.98;
+    letter-spacing: 0.005em;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Sul nero il contorno nero non si vedrebbe. */
+  .on-dark :focus-visible,
+  .on-dark:focus-visible {
+    outline-color: var(--smg-sky);
+  }
+
+  a {
+    color: inherit;
+    text-decoration-thickness: 0.09em;
+    text-underline-offset: 0.18em;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+}
+
+/* Numeri grandi e incolonnati: punteggi, orari, posizioni (brief 4.4). */
+@utility display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.005em;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+@utility kicker {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+@utility card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--smg-radius-card);
+  box-shadow: var(--smg-shadow-card);
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= 40rem) {
+    padding-inline: 1.5rem;
+  }
+}
+
+/* Striscia a scorrimento orizzontale con scatto, senza barra visibile. */
+@utility rail {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Luci dei riflettori: forme decorative chiare sul celeste, mai testo. */
+@utility floodlit {
+  background-color: var(--accent);
+  background-image:
+    radial-gradient(60% 90% at 8% -10%, color-mix(in srgb, var(--smg-white) 80%, transparent), transparent 62%),
+    radial-gradient(50% 80% at 96% -18%, color-mix(in srgb, var(--smg-white) 65%, transparent), transparent 60%);
+  color: var(--on-accent);
+}
+
+/* Evidenza della squadra seguita: bordo e sfondo, non solo colore. */
+@utility followed-team {
+  background: var(--surface-2);
+  box-shadow: inset 3px 0 0 var(--smg-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Stampa: calendario e tabellone su un foglio A4, con il logo e senza la navigazione (brief 7.2). */
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  body {
+    font-size: 10pt;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .card {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
