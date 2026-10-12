@@ -1,0 +1,135 @@
+{
+  "_nota": "Edizione di esempio del brief (sezione 18). Nomi, risultati, date e cifre sono INVENTATI: servono a sviluppare, provare e dimostrare il sito. Ogni riga creata da questo file porta source = 'example' e non deve mai arrivare in produzione.",
+  "edition": {
+    "year": 2027,
+    "name": "SMG Summer Cup 2027",
+    "registration_open": "2027-03-01",
+    "registration_close": "2027-04-30",
+    "config": {
+      "points": { "win": 3, "draw": 1, "loss": 0 },
+      "tiebreakers": ["points", "head_to_head_points", "head_to_head_goal_diff", "goal_diff", "goals_for", "fair_play", "draw_lot"],
+      "groups": 4,
+      "qualify_per_group": 2,
+      "knockout_tie": "penalties",
+      "fair_play": { "yellow": 1, "red": 3 },
+      "forfeit": { "winner_score": 3, "loser_score": 0, "goals_count_for_scorers": false },
+      "schedule": { "slot_times": ["20:00", "20:45", "21:30", "22:15"], "match_minutes": 40 },
+      "format": { "players_on_field": 7, "halves": 2, "half_minutes": 15 },
+      "roster": { "min": 8, "max": 12 },
+      "registration": {
+        "capacity": 16,
+        "fee_text": "120 euro a squadra",
+        "payment_text": "La quota si versa alla consegna della distinta di squadra. Nessun pagamento online."
+      },
+      "features": { "stats": true, "rosters": true, "third_place": false }
+    }
+  },
+  "venue": { "name": "Chiesa Santa Maria Goretti", "address": "Cesenatico (FC)", "field": "Campo 1" },
+  "evenings": ["2027-06-07", "2027-06-08", "2027-06-09", "2027-06-10", "2027-06-11", "2027-06-14", "2027-06-15", "2027-06-16", "2027-06-17", "2027-06-18"],
+  "teams": [
+    { "code": "FAR", "name": "Faro Rovers", "group": "A", "kit_color": "#C8102E", "crest": false },
+    { "code": "GAB", "name": "Gabbiani FC", "group": "A", "kit_color": "#F2F2F2", "crest": false },
+    { "code": "DAR", "name": "Darsena United", "group": "A", "kit_color": "#0E3A5B", "crest": false },
+    { "code": "SCO", "name": "Scogliera Boys", "group": "A", "kit_color": "#4B5563", "crest": true },
+    { "code": "BAG", "name": "Bagni Atletico", "group": "B", "kit_color": "#F59E0B", "crest": true },
+    { "code": "MOL", "name": "Molo Nord", "group": "B", "kit_color": "#111827", "crest": false },
+    { "code": "MAE", "name": "Maestrale FC", "group": "B", "kit_color": "#0F766E", "crest": false },
+    { "code": "TRA", "name": "Tramonto City", "group": "B", "kit_color": "#EA580C", "crest": true },
+    { "code": "VEB", "name": "Vele Bianche", "group": "C", "kit_color": "#FFFFFF", "crest": true },
+    { "code": "POC", "name": "Porto Canale", "group": "C", "kit_color": "#1D4ED8", "crest": true },
+    { "code": "SAL", "name": "Salmastro FC", "group": "C", "kit_color": "#65A30D", "crest": false },
+    { "code": "PIN", "name": "Pineta Boys", "group": "C", "kit_color": "#166534", "crest": false },
+    { "code": "COR", "name": "Corallo FC", "group": "D", "kit_color": "#DB2777", "crest": true },
+    { "code": "ORM", "name": "Ormeggio Team", "group": "D", "kit_color": "#7C3AED", "crest": false },
+    { "code": "SAB", "name": "Sabbia Rossa", "group": "D", "kit_color": "#B45309", "crest": false },
+    { "code": "LEV", "name": "Levante United", "group": "D", "kit_color": "#FACC15", "crest": true }
+  ],
+  "roster_far": [
+    { "number": 1, "first_name": "Gianluca", "last_name": "Brunelli", "role": "P", "minor": false, "mode": "full", "consent": "received" },
+    { "number": 2, "first_name": "Matteo", "last_name": "Santorsi", "role": "D", "minor": false, "mode": "full", "consent": "received" },
+    { "number": 3, "first_name": "Davide", "last_name": "Ferrucci", "role": "D", "minor": true, "mode": "initial", "consent": "received" },
+    { "number": 4, "first_name": "Nicolò", "last_name": "Baldelli", "role": "D", "minor": false, "mode": "full", "consent": "received" },
+    { "number": 5, "first_name": "Samuele", "last_name": "Pasini", "role": "D", "minor": false, "mode": "hidden", "consent": "received" },
+    { "number": 6, "first_name": "Simone", "last_name": "Gaspari", "role": "C", "minor": false, "mode": "full", "consent": "received" },
+    { "number": 7, "first_name": "Federico", "last_name": "Corbelli", "role": "A", "minor": false, "mode": "full", "consent": "received" },
+    { "number": 8, "first_name": "Andrea", "last_name": "Montanari", "role": "C", "minor": true, "mode": "initial", "consent": "received" },
+    { "number": 9, "first_name": "Lorenzo", "last_name": "Venturelli", "role": "A", "minor": true, "mode": "initial", "consent": "received" },
+    { "number": 10, "first_name": "Riccardo", "last_name": "Sacchetti", "role": "C", "minor": false, "mode": "full", "consent": "received" }
+  ],
+  "stars": [
+    { "team": "FAR", "number": 9, "goals": 6 },
+    { "team": "POC", "number": 9, "first_name": "Mattia", "last_name": "Rondoni", "goals": 5 },
+    { "team": "BAG", "number": 9, "first_name": "Kevin", "last_name": "Mazzotti", "goals": 4 },
+    { "team": "MOL", "number": 9, "first_name": "Giacomo", "last_name": "Neri", "goals": 3 },
+    { "team": "LEV", "number": 9, "first_name": "Paolo", "last_name": "Zanotti", "goals": 3 }
+  ],
+  "group_matches": [
+    { "evening": 1, "time": "20:00", "group": "A", "round": 1, "home": "FAR", "away": "GAB", "home_score": 2, "away_score": 1 },
+    { "evening": 1, "time": "20:45", "group": "A", "round": 1, "home": "DAR", "away": "SCO", "home_score": 0, "away_score": 0 },
+    { "evening": 1, "time": "21:30", "group": "B", "round": 1, "home": "BAG", "away": "MOL", "home_score": 2, "away_score": 0 },
+    { "evening": 1, "time": "22:15", "group": "B", "round": 1, "home": "MAE", "away": "TRA", "home_score": 2, "away_score": 1 },
+    { "evening": 2, "time": "20:00", "group": "C", "round": 1, "home": "VEB", "away": "POC", "home_score": 1, "away_score": 1 },
+    { "evening": 2, "time": "20:45", "group": "C", "round": 1, "home": "SAL", "away": "PIN", "home_score": 2, "away_score": 0 },
+    { "evening": 2, "time": "21:30", "group": "D", "round": 1, "home": "COR", "away": "ORM", "home_score": 3, "away_score": 0, "forfeit": true },
+    { "evening": 2, "time": "22:15", "group": "D", "round": 1, "home": "SAB", "away": "LEV", "home_score": 1, "away_score": 2 },
+    { "evening": 3, "time": "20:00", "group": "A", "round": 2, "home": "FAR", "away": "DAR", "home_score": 1, "away_score": 1 },
+    { "evening": 3, "time": "20:45", "group": "A", "round": 2, "home": "SCO", "away": "GAB", "home_score": 3, "away_score": 2 },
+    { "evening": 3, "time": "21:30", "group": "B", "round": 2, "home": "BAG", "away": "MAE", "home_score": 3, "away_score": 1 },
+    { "evening": 3, "time": "22:15", "group": "B", "round": 2, "home": "TRA", "away": "MOL", "home_score": 1, "away_score": 0 },
+    { "evening": 4, "time": "20:00", "group": "C", "round": 2, "home": "VEB", "away": "SAL", "home_score": 3, "away_score": 1, "postponed_to": { "evening": 5, "time": "19:15", "reason": "pioggia" } },
+    { "evening": 4, "time": "20:45", "group": "C", "round": 2, "home": "PIN", "away": "POC", "home_score": 0, "away_score": 2 },
+    { "evening": 4, "time": "21:30", "group": "D", "round": 2, "home": "COR", "away": "SAB", "home_score": 2, "away_score": 2 },
+    { "evening": 4, "time": "22:15", "group": "D", "round": 2, "home": "LEV", "away": "ORM", "home_score": 1, "away_score": 1 },
+    { "evening": 5, "time": "20:00", "group": "A", "round": 3, "home": "FAR", "away": "SCO", "home_score": 4, "away_score": 0 },
+    { "evening": 5, "time": "20:45", "group": "A", "round": 3, "home": "GAB", "away": "DAR", "home_score": 2, "away_score": 1 },
+    { "evening": 5, "time": "21:30", "group": "B", "round": 3, "home": "BAG", "away": "TRA", "home_score": 1, "away_score": 0 },
+    { "evening": 5, "time": "22:15", "group": "B", "round": 3, "home": "MOL", "away": "MAE", "home_score": 3, "away_score": 1 },
+    { "evening": 6, "time": "20:00", "group": "C", "round": 3, "home": "VEB", "away": "PIN", "home_score": 2, "away_score": 2 },
+    { "evening": 6, "time": "20:45", "group": "C", "round": 3, "home": "POC", "away": "SAL", "home_score": 1, "away_score": 0 },
+    { "evening": 6, "time": "21:30", "group": "D", "round": 3, "home": "COR", "away": "LEV", "home_score": 0, "away_score": 1 },
+    { "evening": 6, "time": "22:15", "group": "D", "round": 3, "home": "ORM", "away": "SAB", "home_score": 2, "away_score": 1 }
+  ],
+  "knockout": [
+    { "stage": "quarter", "slot": 1, "evening": 7, "time": "20:00", "home_from": "A1", "away_from": "B2", "home": "FAR", "away": "MOL", "home_score": 3, "away_score": 1 },
+    { "stage": "quarter", "slot": 2, "evening": 7, "time": "20:45", "home_from": "B1", "away_from": "A2", "home": "BAG", "away": "SCO", "home_score": 2, "away_score": 2, "home_pens": 4, "away_pens": 3 },
+    { "stage": "quarter", "slot": 3, "evening": 7, "time": "21:30", "home_from": "C1", "away_from": "D2", "home": "POC", "away": "COR", "home_score": 1, "away_score": 0 },
+    { "stage": "quarter", "slot": 4, "evening": 7, "time": "22:15", "home_from": "D1", "away_from": "C2", "home": "LEV", "away": "VEB", "home_score": 0, "away_score": 1 },
+    { "stage": "semi", "slot": 1, "evening": 8, "time": "21:00", "home_from": "W:quarter:1", "away_from": "W:quarter:3", "home": "FAR", "away": "POC", "home_score": 1, "away_score": 2 },
+    { "stage": "semi", "slot": 2, "evening": 8, "time": "21:45", "home_from": "W:quarter:2", "away_from": "W:quarter:4", "home": "BAG", "away": "VEB", "home_score": 3, "away_score": 1 },
+    { "stage": "final", "slot": 1, "evening": 9, "time": "21:30", "home_from": "W:semi:1", "away_from": "W:semi:2", "home": "POC", "away": "BAG", "home_score": 3, "away_score": 2, "mvp": { "team": "POC", "number": 9 } }
+  ],
+  "supercup": { "evening": 10, "time": "21:30", "home": "FAR", "away_from": "W:final:1", "away": "POC", "home_score": 2, "away_score": 1 },
+  "red_cards": [
+    { "match": "quarter:2", "team": "SCO", "number": 4, "minute": 27 },
+    { "match": "group:B:3:MOL-MAE", "team": "MAE", "number": 2, "minute": 22 }
+  ],
+  "yellow_cards_total": 38,
+  "expected": {
+    "matches_played": 32,
+    "total_goals": 88,
+    "top_scorers": [
+      { "name": "Lorenzo V.", "team": "FAR", "goals": 6 },
+      { "name": "Mattia Rondoni", "team": "POC", "goals": 5 },
+      { "name": "Kevin Mazzotti", "team": "BAG", "goals": 4 },
+      { "name": "Giacomo Neri", "team": "MOL", "goals": 3 },
+      { "name": "Paolo Zanotti", "team": "LEV", "goals": 3 }
+    ],
+    "standings": {
+      "A": [["FAR", 7], ["SCO", 4], ["GAB", 3], ["DAR", 2]],
+      "B": [["BAG", 9], ["MOL", 3], ["TRA", 3], ["MAE", 3]],
+      "C": [["POC", 7], ["VEB", 5], ["SAL", 3], ["PIN", 1]],
+      "D": [["LEV", 7], ["COR", 4], ["ORM", 4], ["SAB", 1]]
+    },
+    "cup_winner": "POC",
+    "supercup_winner": "FAR"
+  },
+  "sponsors": [
+    { "name": "Cantiere Levante" },
+    { "name": "Bagno Delfino" },
+    { "name": "Pizzeria Il Faro" },
+    { "name": "Gelateria Stella Marina" },
+    { "name": "Officina Rossi" }
+  ],
+  "waitlist": ["Onda Lunga", "Atletico Salsedine", "Real Bonaccia", "Polisportiva Amici del Lungomare di Ponente e Dintorni"],
+  "previous_edition": { "year": 2026, "name": "SMG Summer Cup 2026", "start_date": "2026-06-12", "end_date": "2026-06-26", "cup_winner": "FAR" }
+}
